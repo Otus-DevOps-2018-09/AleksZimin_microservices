@@ -1,6 +1,37 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-16
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Развернул инстанс в GCP с помощью docker-machine
+* Запустил gitlab в контейнере. Отключил решистрацию, создал группу и проект в веб-интерфейсе.
+* Запушил исходники в репозиторий проекта на gitlab.
+* Создал pipeline .gitlab-ci.yml
+* Создал контейнер gitlab-runner и в интерктивном режиме его зарегистрировал.
+* Запустил pipeline, runner запустил контейнер, сбилдил приложение и прогнал простейшие тесты
+
+## HW-15
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-4)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Запустил контейнеры с разными встроенными драйверами: none, host, bridge.
+* Создал две сети front_net и back_net.
+* Установил docker-compose. Написал конфиг для него
+* Изменил docker-compose.yml под кейс с множеством сетей.
+* Параметризировал с помощью переменных окружений: 
+```
+-внешний и внутренний порты сервиса ui
+-версии сервисов
+-имя пользователя
+-название проекта
+```
+* Добавил файл .env в .gitignore.
+* Базовое имя создается по имени папки, в которой происходит запуск docker-compose.
+
+Для задания базового имени проекта необходимо добавить переменную COMPOSE_PROJECT_NAME=reddit_app.
+
 ## HW-14
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-3)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
