@@ -1,6 +1,26 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-15
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-4)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Запустил контейнеры с разными встроенными драйверами: none, host, bridge.
+* Создал две сети front_net и back_net.
+* Установил docker-compose. Написал конфиг для него
+* Изменил docker-compose.yml под кейс с множеством сетей.
+* Параметризировал с помощью переменных окружений: 
+```
+-внешний и внутренний порты сервиса ui
+-версии сервисов
+-имя пользователя
+-название проекта
+```
+* Добавил файл .env в .gitignore.
+* Базовое имя создается по имени папки, в которой происходит запуск docker-compose.
+
+Для задания базового имени проекта необходимо добавить переменную COMPOSE_PROJECT_NAME=reddit_app.
+
 ## HW-14
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-3)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
