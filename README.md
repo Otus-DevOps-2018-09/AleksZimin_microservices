@@ -1,6 +1,18 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-14
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-3)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Установил hadolint в своей ОС и интегрировал его с VScode с помощью расширения vscode-hadolint.
+* Загрузил новые исходники нашего приложения, разделённые на модули.
+* Написал докерфайлы для каждого сервиса.
+* Скачал образ mongodb, сбилдил образы с сервисами, создал сеть (bridge) для приложения.
+* Запустил контейнеры.
+* Перезапустил контейнеры с новыми сетевыми алиасами без пересборки образов.
+* Добавил volume для mongodb. Теперь при перезапуске приложения посты не удаляются.
+
 ## HW-13
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
