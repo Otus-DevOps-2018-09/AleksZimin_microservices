@@ -1,6 +1,24 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-17
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Запустил созданный в прошлом занятии инстанс в GCP с помощью docker-machine. У инстанса сменился ip.
+* Из за смены ip необходимо было выполнить следующее:
+```
+-Сгенерировать новые сертификаты для инстанса в docker-machine (docker-machine regenerate-certs docker-host)
+-Заменить ip адрес сервера в docker-compose.yml для контейнера gitlab-ci.
+-Пересоздать контейнер gitlab-ci.
+-Зарегистрировать в gitlab runner новый адрес сервера и токен.
+```
+* Создал новый проект example2 в gitlab
+* Добавил проект в git
+* Добавил окружения dev, stage и production в .gitlab-ci.yml
+* Добавил ограничения для окружений stage и production (when: manual и only)
+* Добавил переменные в .gitlab-ci.yml, которые определяют динамические окружения для каждой ветки в репозитории, кроме ветки master
+
 ## HW-16
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
