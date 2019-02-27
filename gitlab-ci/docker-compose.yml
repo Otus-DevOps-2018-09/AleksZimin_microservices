@@ -4,7 +4,7 @@ web:
   hostname: 'gitlab.example.com'
   environment:
     GITLAB_OMNIBUS_CONFIG: |
-      external_url 'http://34.76.35.104'
+      external_url 'http://34.76.60.156'
   ports:
     - '80:80'
     - '443:443'
