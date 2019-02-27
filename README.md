@@ -1,6 +1,7 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+
 ## HW-17
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
@@ -19,6 +20,7 @@ AleksZimin microservices repository
 * Добавил ограничения для окружений stage и production (when: manual и only)
 * Добавил переменные в .gitlab-ci.yml, которые определяют динамические окружения для каждой ветки в репозитории, кроме ветки master
 
+
 ## HW-16
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=gitlab-ci-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
@@ -29,6 +31,8 @@ AleksZimin microservices repository
 * Создал pipeline .gitlab-ci.yml
 * Создал контейнер gitlab-runner и в интерктивном режиме его зарегистрировал.
 * Запустил pipeline, runner запустил контейнер, сбилдил приложение и прогнал простейшие тесты
+
+
 
 ## HW-15
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=docker-4)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
