@@ -1,6 +1,20 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-18
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=monitoring-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Запустил Prometheus в докере из официального образа.
+* Создал докерфайл, который на основе официального образа Prometheus собирает кастомный образ с нашим конфигом. При каждом изменении конфига Prometheus необходимо пересобрать образ.
+* Собрал образы приложения и Prometheus.
+* Добавил в docker-compose prometheus и убрал оттуда все инструкции build, т.к. образы собираем баш скриптами.
+* Поднял контейнеры, проверил добавление новых targets.
+* Поднял node-exporter (софт для предоставления метрик о работе ОС Linux). Проверил его работу
+
+### Сылка на докер хаб с моими образами:
+* https://hub.docker.com/u/zav19
+
 ## HW-17
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=gitlab-ci-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 

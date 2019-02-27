@@ -1,5 +1,6 @@
 version: '3.5'
 services:
+
   post_db:
     image: mongo:${MONGODB_VER}
     volumes:
@@ -9,28 +10,58 @@ services:
         aliases:
           - comment_db
           - post_db
+
   ui:
-    build: ./ui
     image: ${USERNAME}/ui:${UI_VER}
     ports:
       - ${EXTERNAL_PORT}:${INTERNAL_PORT}/tcp
     networks:
       - front_net
+
   post:
-    build: ./post-py
     image: ${USERNAME}/post:${POST_VER}
     networks:
       - front_net
       - back_net
+
   comment:
-    build: ./comment
     image: ${USERNAME}/comment:${COMMENT_VER}
     networks:
       - front_net
       - back_net
 
+  prometheus:
+    image: ${USERNAME}/prometheus:${PROMETHEUS_VER}
+    ports:
+      - '9090:9090'
+    volumes:
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention=1d'
+    networks:
+      - front_net
+      - back_net
+
+  node-exporter:
+    image: prom/node-exporter:v0.15.2
+    user: root
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+    networks:
+      - front_net
+
+
 volumes:
   post_db:
+  prometheus_data:
 
 networks:
   front_net:
