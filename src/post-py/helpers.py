@@ -24,4 +24,3 @@ def health(mongo_host, mongo_port):
         'version': version.rstrip('\n')
     }
     return dumps(healthcheck)
-    

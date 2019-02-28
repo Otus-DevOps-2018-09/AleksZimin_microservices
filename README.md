@@ -1,6 +1,21 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-19
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=monitoring-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Разделил docker-compose на два файла. В одном запускаются контейнеры приложения, в другом мониторинга.
+* Запустил cAdvisor. Добавил в настройки prometheus target cAdvisor. В firewall GCP открыл порт 8080.
+* Запустил grafana. В firewall GCP открыл порт 3000. Добавил вручную источник prometheus, загрузил дашборд из комьюнити.
+* Добавил несколько метрик из приложения, rate ошибочных запросов. rate - производная функции по времени (показывает скорость изменения графика).
+* Добавил мониторинг метрик бизнес логики. Счётчик комментариев и постов. Добавил отображение скорости роста количества комментариев и постов за последний час.
+* Добавил контейнер alertmanager и отправку алертов в наш канал slack.
+* Добавил alert на условие down любого из контейнеров.
+
+
+### Сылка на докер хаб с моими образами:
+* https://hub.docker.com/u/zav19
 
 ## HW-18
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=monitoring-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
