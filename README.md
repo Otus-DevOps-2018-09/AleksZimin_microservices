@@ -1,6 +1,17 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-20
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=logging-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Забрал новую версию приложения и пересобрал образы приложений с тегом logging.
+* Поменял в .env файле версии сервисов на logging.
+* Поднял по инструкции EFK.
+* Настроил docker-compose на вывод логов stdout в fluentd для контейнеров post и ui.
+* Добавил фильтр с регулярным выражением для контейнера ui.
+* Заменил регулярное выражение на грок-шаблоны.
+
 ## HW-19
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=monitoring-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
