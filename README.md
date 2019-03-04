@@ -1,6 +1,17 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-21
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Описал deployment для сервиса post.
+* Самостоятельно описал deployment для других сервисов
+* Установил tmux
+* Создал кластер k8s по инструкции https://github.com/kelseyhightower/kubernetes-the-hard-way.
+* Создали поды из созданных deployment.
+
+
 ## HW-20
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=logging-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
