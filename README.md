@@ -1,6 +1,24 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-23
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-3)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Проверил работу kube-dns. Отключил kube-dns-autoscaler. Отключил kube-dns. Связь между контейнерами пропала.
+* Сделал ui-service типа NodePort, который прослушивает заданный порт на всех нодах из интернета и перенаправляет их на поды, подходящие к заданным условиям (перенаправление будет осуществляться даже если подов на данной ноде нет)
+* Сделал ui-service типа LoadBalancer: единая точка входа. Перенаправляет трафик из интернета на NodePort, который может быть настроен на прослушивание трафика только внутри сети кластера
+* Сделал ingress для ui. Для работы ingress нужен сервис с типом NodePort. Настроил ingress на работу с http.
+* Создал tls-сертификат с ключом и на его основе создал секрет в kubernetes. Убрал в ingress возможность работы по http.
+* Включил сетевой плагин Calico, чтобы включить NetworkPolicy.
+* Запретил обращаться к монге со всех подов, кроме comment. 
+* Проверил работу монги с volume emptyDir. Данные удаляются после пересоздания пода.
+* Поменял volume emptyDir на предварительно созданый persistent диск в GCP.
+* Проверил работу монги с persistent диском. Данные сохраняются после пересоздания пода.
+* Создал описание для persistent volume из уже созданного диска.
+* Создал описание для persistentVolumeClaim и применил этот claim к уже созданному деплойменту.
+* Подключил динамический PVC к подам монги
+
 ## HW-22
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
