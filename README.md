@@ -1,6 +1,25 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-22
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-2)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Установил kubectl и minikube на Linux на отдельной виртуалке, запущенной в KVM (использовалась вложенная виртуализация). Приложение проверял с помощью ssh туннелей
+* Создал deployments и services.
+* Добавил два алиаса-сервиса для mongodb, чтобы микросервисы post и comment могли подключиться БД. Так же добавил переменные окружения в микросервисы, которые указывают новый адрес БД (имена алиасов-сервисов не могут создержать нижнее подчёркивание).
+* Посмотрел дашборд, немного поковырялись.
+* Создал dev namespace. Запустил приложение в нём.
+* Добавил переменную окружения в UI. В коде приложения эта переменная выводится в шапке главной страницы.
+* Развернул кластер в GKE, перенес туда приложение и создал правила фаервола.
+* Ссылка на приложение http://34.76.22.61:30521 
+![Reddit app in GKE](images/hw22_1.png)
+
+* Включил дашбоард в GKE, подключился к нему через kubectl-proxy. Адрес дашбоарда (порт другой из за ssh туннеля):
+```
+http://localhost:18001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/
+```
+
 ## HW-21
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-1)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
