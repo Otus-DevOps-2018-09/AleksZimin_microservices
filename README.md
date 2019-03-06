@@ -1,6 +1,22 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-25
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-5)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Увеличил число нод в пуле g1-small с 0 до 2 и в пуле n1-standard-2 с 0 до 1. ( Кластер и пулы остались с прошлого ДЗ. Уменьшил число нод в них до 0 по окончании прошлого дз)
+* Отключил Stackdriver Logging и Stackdriver Monitoring.
+* Установил ingress-контроллер nginx.
+* Из Helm чарта установил Prometheus (использовал кастомные переменные).
+* Включил сервисы kube-state-metrics и node-exporter в prometheus.
+* Настроил service discovery по меткам.
+* Включил relabeling для трансляции метрик k8s в метки prometheus.
+* Настроил отдельные job'ы для отображения эндпоинтов каждой компоненты приложения (post-endpoints, comment-endpoints, ui-endpoints).
+* Из Helm чарта установил Grafana.
+* Добавил дашборд "Kubernetes cluster monitoring (via Prometheus)" и ранее созданные дашборды из предыдущих ДЗ.
+* Параметризировал ранее созданные дашбоарды (добавил возможность выбора окружения).
+
 ## HW-24
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-4)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
