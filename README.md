@@ -1,6 +1,24 @@
 # AleksZimin_microservices
 AleksZimin microservices repository
 
+## HW-24
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-4)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
+
+### Основное задание:
+* Установил Helm. Контекст берётся из kubectl.
+* Установил серверную часть Helm (Tiller). Устанавливается как pod. Права выдал с помощью RBAC.
+* Написал шаблоны микросерисов (deployment, service, ingress). Проверил создание релиза. Удалил после проверки. Добавил переменные и файлы values.yaml с их значениями .
+* Создал несколько релизов. Работают параллельно, не зависят друг от друга.
+* Добавил _helpers.tpl. Написал функцию преобразования переменных в шаблонах.
+* Создал Chart reddit, в котором указал зависимости от чартов микросервисов.
+* Добавил в Chart reddit зависимость от mongodb версии 0.4.18.
+* Добавил в ui переменные, содеражащие хостнеймы и порты сервисов post и comment.
+* Создал ещё один пул, состоящий из одной ноды. Включил устаревшие права доступа, т.к. версия gitlab ск оторой мы работаем не умеет работать с ролями. Установил gitlab-omnibus.
+* Добавил в переменные гитлаба логин-пароль к докерхабу. Создал группу, проекты (ui, post, comment, reddit-deploy), загрузил туда исходники микросервисов и чарты reddit-deploy.
+* Настроил gitlab-ci для микросервисов. Сделал автоматическое создание environment для review feature-ветки и деплой туда приложения (всех микросервисов). Environment feature-ветки можно удалить по кнопке.
+* Настроил gitlab-ci для reddit-deploy. Сделал автоматическое создание environment staging и production и деплой в эти среды по кнопкам.
+* По окончанию практики удалил все созданные сервисы в кластере. Уменьшил размер кластера до 0.
+
 ## HW-23
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices.svg?branch=kubernetes-3)](https://travis-ci.com/Otus-DevOps-2018-09/AleksZimin_microservices)
 
